@@ -1,0 +1,47 @@
+.ac_results{z-index: 9999999999 !important}
+#moveMe{z-index: 999997 !important}
+.blackrectangle { 
+	z-index: 999998 !important; 
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 3px solid #3476CE; 
+	opacity: 0.8; 
+	overflow: visible;
+	cursor:pointer
+}
+.innerTag {
+    background-color: #3476CE;
+    color: #FFFFFF;
+    float: left;
+    font-size: 12px;
+    height: 14px;
+    left: -3px;
+    padding: 3px;
+    position: relative;
+    top: -23px;
+}
+.innerTagAddMargin{margin:11px;}
+.photoTag-delete {
+    background: url("../img/x2.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: inline;
+    height: 29px;
+    opacity: 0.8;
+    position: absolute;
+    right: -18px;
+    top: -17px;
+    width: 25px;
+    z-index: 3200;
+}
+.photoTag-delete-anthr {
+    background: url("../img/x2.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: inline;
+    height: 29px;
+    opacity: 0.8;
+    position: absolute;
+    width: 25px;
+    z-index: 3200;
+}
+.mainTagNames{padding:30px;cursor:pointer}
+.buttons{margin:25px;}
+.txtSearch{font-weight:bold;width:200px;}

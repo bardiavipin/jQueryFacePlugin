@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>jQuery Face Plugin</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">	
+		<link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
+		<link rel="stylesheet" href="css/demos.css" type="text/css" />
+		<link rel="stylesheet" href="css/main.css" type="text/css" />
+		<link type="text/css" href="css/jquery.autocomplete.css" rel="stylesheet" />
+		<link type="text/css" href="css/jquery.tagsinput.css" rel="stylesheet" />
+		
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/jquery.Jcrop.js" type="text/javascript"></script>		
+		<script src="js/jquery.autocomplete.js"></script>		
+		<script src="js/jquery.tagsinput.js"></script>
+		
+		<script type="text/javascript">
+			var divCount=0;		
+			
+			var j_crop;
+			jQuery(function($){
+				//crop image
+				$('#queryfill').tagsInput({    
+					  autocomplete_url:'auto_comp_url',
+					  autocomplete:{highlightItem: true,scroll: true,scrollHeight: 300,width:'150px'},
+					  'defaultText':'add a tag',
+					   'onAddTag':addATag,
+					   'onRemoveTag':removeATag,
+					   'removeWithBackspace' : true,
+					   'height':'20px',
+					   'width':'180px',
+					   'interactive':true,
+					   'minChars' : 0,
+					   'maxChars' : 0
+					});
+			});
+		</script>
+		
+		<script src="js/TagPhotos.js"></script>
+	</head>
+	<body>    
+
+
+		<div id="MainDiv">
+			<img src="img/DSC01895.JPG" id="target" usemap="#imageMap" onmousemove="hideAllArea()" class="" width="1000px" height="400px"/>
+
+			<map id="imageMap" name="imageMap">
+				 
+			</map>
+			
+			<form id="coords" class="coords" action="" method="POST">
+			  <div>
+				  <label>X1 <input type="text" size="4" id="x1" name="x1" /></label>
+				  <label>Y1 <input type="text" size="4" id="y1" name="y1" /></label>
+				  <label>X2 <input type="text" size="4" id="x2" name="x2" /></label>
+				  <label>Y2 <input type="text" size="4" id="y2" name="y2" /></label>
+				  <label>W <input type="text" size="4" id="w" name="w" /></label>
+				  <label>H <input type="text" size="4" id="h" name="h" /></label>
+			  </div>
+			  <div class="buttons">
+				  <input type="button" name= "EditTagImage" value="Edit Tags" onclick="editTagImage()"/>
+				  <input type="submit" name= "DoneTagging" value="Done Tagging" onclick="editTag(0);hideBox();"/>
+			  </div>
+					
+			</form>
+			
+			<div id="moveMe" style="display:none;">
+				<input type="text" name="searchTerm" class="txtSearch" maxlength="30" size="50" id="queryfill" />
+			</div>
+		</div>
+
+
+		<div class ="mainTagNames" id="tagNames">
+
+		</div>
+		
+	</body>
+	
+</html>
