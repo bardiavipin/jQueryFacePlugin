@@ -1,0 +1,1 @@
+This plugin will help you to tag people around you same as facebook.
