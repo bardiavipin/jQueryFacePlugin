@@ -15,3 +15,9 @@ There are some functions which could help you for enhancements from your side.
 					This function is calling another function UrlExists. You can pass on your own url in it.
 					
 
+					
+Note : 
+
+To maintain the UI after Publish / Done tagging you can take a reference from https://github.com/bardiavipin/Face/blob/master/face-portlet/docroot/view.jsp .
+
+And for server side code you can take a reference from https://github.com/bardiavipin/Face/blob/master/face-portlet/docroot/WEB-INF/src/com/learn/face/controller/FaceController.java .
